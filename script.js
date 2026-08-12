@@ -65,6 +65,12 @@ const reviewsData = [
         role: "Owners Alliance Management",
         text: "Vouch!!\n\nEda is one of the best managers I have ever worked with and I fully look up to him as my mentee in the reports department. He is so helpful & always takes the time out of his day to help me whenever I need his help.\n\nThank you Eda 🙂",
         img: "./ollie.png"
+    },
+    {
+        name: "Scrainyr",
+        role: "Owners Alliance Staff",
+        text: "Eda is extremely professional at all times whilst still being a nice guy you can work with, his work as RM is outstanding and I would definitely recommend him.",
+        img: "./scrainyr.jpg"
     }
 ];
 
