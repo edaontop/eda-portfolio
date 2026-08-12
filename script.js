@@ -46,7 +46,7 @@ const reviewsData = [
         name: "Blastingg",
         role: "Dawn / Feather Client Staff",
         text: "Vouch\n\nEda has been a dedicated Staff Member during his time at Dawn/Feather. Never caused any issues, was a great part of the team. Can recommend him for anyone looking for a dedicated Staff Member to add to their team!",
-        img: "./icons8-person-64.png"
+        img: "./blastingg.jpg"
     },
     {
         name: "d1k8",
@@ -62,7 +62,7 @@ const reviewsData = [
     },
     {
         name: "Ollie",
-        role: "Colleague",
+        role: "Owners Alliance Management",
         text: "Vouch!!\n\nEda is one of the best managers I have ever worked with and I fully look up to him as my mentee in the reports department. He is so helpful & always takes the time out of his day to help me whenever I need his help.\n\nThank you Eda 🙂",
         img: "./ollie.png"
     }
