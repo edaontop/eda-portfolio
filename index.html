@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eda - Developer & Manager</title>
+    <link rel="icon" type="image/png" href="eda_pfp.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Small inline style to ensure the favicon-like images used in the page are circled as well */
+        .circle-img { border-radius: 50% !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <video autoplay muted loop playsinline>
+            <source src="./6378-191636243.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content reveal visible">
+            <h1 class="hero-title">Eda</h1>
+            <div class="hero-divider"></div>
+            <h2 class="hero-subtitle">developer & manager</h2>
+        </div>
+        <div class="scroll-down" onclick="scrollToSection('about')">
+            <span class="scroll-text">Scroll Down</span>
+            <span class="scroll-arrow">↓</span>
+        </div>
+    </section>
+
+    <div class="page-wrapper">
+        <!-- Left Sidebar (Fixed) -->
+        <aside class="sidebar">
+            <img src="./eda_pfp.png" onerror="this.src='https://picsum.photos/160'" alt="Eda Profile" class="sidebar-pfp circle-img">
+            <h3 class="sidebar-name">Eda<span>.</span></h3>
+            <p class="sidebar-subtitle">DEVELOPER / MANAGER</p>
+            
+            <div class="sidebar-nav">
+                <div class="sidebar-nav-item" onclick="scrollToSection('hero')" data-target="hero">
+                    <img src="./icons8-home-50.png" alt="Home"> Home
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('about')" data-target="about">
+                    <img src="./icons8-person-64.png" alt="About"> About Me
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('services')" data-target="services">
+                    <img src="./icons8-setting-50.png" alt="Services"> Services
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('skills')" data-target="skills">
+                    <img src="./icons8-skills-50.png" alt="Skills"> Skills
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('experience')" data-target="experience">
+                    <img src="./icons8-graduation-48.png" alt="Experience"> Experience
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('portfolio')" data-target="portfolio">
+                    <img src="./icons8-portfolio-50.png" alt="Portfolio"> Portfolio
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('reviews')" data-target="reviews">
+                    <img src="./icons8-hand-with-pen-50.png" alt="Reviews"> Reviews
+                </div>
+                <div class="sidebar-nav-item" onclick="scrollToSection('contact')" data-target="contact">
+                    <img src="./icons8-telephone-48.png" alt="Contact"> Contact Me
+                </div>
+            </div>
+            
+            <div class="sidebar-socials">
+                <a href="https://github.com/edadev" target="_blank"><img src="./icons8-github-64.png" alt="GitHub" class="social-icon"></a>
+                <a href="https://discord.com/users/760153843547242506" target="_blank"><img src="./icons8-discord-50.png" alt="Discord" class="social-icon"></a>
+                <a href="mailto:contact@edadev.net"><img src="./icons8-email-50.png" alt="Email" class="social-icon"></a>
+            </div>
+            
+            <div class="sidebar-footer">
+                © Eda 2026
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="content-area">
+            
+            <!-- About Me -->
+            <section id="about" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <img src="./eda_pfp.png" onerror="this.src='https://picsum.photos/200'" alt="Eda Profile" class="about-pfp circle-img">
+                    <div class="about-content">
+                        <h2 class="about-hello"><span class="accent-phrase">Hello!</span></h2>
+                        <p class="about-bio">
+                            I'm Eda, <span class="accent-phrase">a sixteen-year-old management</span> and <span class="accent-phrase">development enthusiast</span> from <span class="accent-phrase">Prague, Czech Republic</span>. Despite my age, I have several years of hands-on experience <span class="accent-phrase">managing</span> projects, businesses, and networks of various sizes. I focus on creating <span class="accent-phrase">efficient systems</span> that allow teams and projects to operate smoothly, grow properly, and stay <span class="accent-phrase">reliable</span> over the long term.<br><br>
+                            My main goal is to <span class="accent-phrase">expand</span> my experience and create a <span class="accent-phrase">welcoming environment</span> where people can perform at their best and where projects can grow consistently. I have been interested in <span class="accent-phrase">management</span> for more than <span class="accent-phrase">four years</span>, starting in early 2022, when I first began working with <span class="accent-phrase">passionate and dedicated teams</span> and learning how to organize projects and work with new people. In 2025, I also started focusing on <span class="accent-phrase">web and Discord bot development</span>. While I am still expanding my technical experience, I enjoy learning new things and gradually building my skills in development.<br><br>
+                            Outside of work, I spend most of my time with my family, training in the gym, and spending time in nature. I am also a passionate glider pilot.
+                        </p>
+                        <button class="btn-primary" onclick="scrollToSection('contact')">
+                            <img src="./Email-Action-Unread--Streamline-Ultimate (1).png" alt="Email Icon"> Contact Me
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" onclick="openModal('service-modal', 'Web Development', ['Custom website development', 'Frontend architecture', 'Performance optimization', 'Responsive design implementation'])">
+                        <img src="./icons8-globe-50 (1).png" alt="Web Dev" class="service-icon-img">
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">Building fast, responsive, and visually stunning web applications.</p>
+                    </div>
+                    
+                    <div class="service-card" onclick="openModal('service-modal', 'Staff Management', ['Team leadership and mentoring', 'Conflict resolution', 'Workflow structuring', 'Performance tracking'])">
+                        <img src="./icons8-staff-48.png" alt="Staff Mgmt" class="service-icon-img">
+                        <h3 class="service-title">Staff Management</h3>
+                        <p class="service-desc">Guiding teams to achieve optimal efficiency and long-term consistency.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('service-modal', 'Operations Management', ['Process optimization', 'Resource allocation', 'Day-to-day administration', 'Standard operating procedures'])">
+                        <img src="./icons8-management-50.png" alt="Ops Mgmt" class="service-icon-img">
+                        <h3 class="service-title">Operations Management</h3>
+                        <p class="service-desc">Overseeing day-to-day processes to ensure smooth system operation.</p>
+                    </div>
+                    
+                    <div class="service-card" onclick="openModal('service-modal', 'Human Resources', ['Talent acquisition and recruitment', 'Staff onboarding', 'Employee relations management', 'Policy development'])">
+                        <img src="./icons8-human-resources-66.png" alt="HR" class="service-icon-img">
+                        <h3 class="service-title">Human Resources</h3>
+                        <p class="service-desc">Managing recruitment, relations, and team culture.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('service-modal', 'Project Management', ['Timeline planning', 'Milestone tracking', 'Cross-functional communication', 'Risk management'])">
+                        <img src="./icons8-project-management-50.png" alt="Project Mgmt" class="service-icon-img">
+                        <h3 class="service-title">Project Management</h3>
+                        <p class="service-desc">Leading projects from ideation to successful execution and delivery.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('service-modal', 'Customer Support', ['Ticket resolution', 'Live chat support', 'User guidance', 'Issue tracking'])">
+                        <img src="./icons8-customer-service-64.png" alt="Customer Support" class="service-icon-img">
+                        <h3 class="service-title">Customer Service</h3>
+                        <p class="service-desc">Providing premium assistance to enhance user satisfaction.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('service-modal', 'Support Representative', ['Technical troubleshooting', 'Policy enforcement', 'Community engagement', 'Feedback collection'])">
+                        <img src="./icons8-support-64.png" alt="Support Rep" class="service-icon-img">
+                        <h3 class="service-title">Support Representative</h3>
+                        <p class="service-desc">Dedicated representative handling inquiries and community needs.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('service-modal', 'Sales Representative', ['Lead generation', 'Client negotiation', 'Product presentation', 'Closing deals'])">
+                        <img src="./icons8-sales-64.png" alt="Sales Rep" class="service-icon-img">
+                        <h3 class="service-title">Sales Representative</h3>
+                        <p class="service-desc">Driving growth through strategic communication and sales.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                </div>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Management</span>
+                            <span class="skill-pct" data-target="100">0%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-bar" data-width="100"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Support</span>
+                            <span class="skill-pct" data-target="100">0%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-bar" data-width="100"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Discord Bot Development</span>
+                            <span class="skill-pct" data-target="90">0%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-bar" data-width="90"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Web Development</span>
+                            <span class="skill-pct" data-target="90">0%</span>
+                        </div>
+                        <div class="skill-track"><div class="skill-bar" data-width="90"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                    <span class="section-subtitle">I’ve started my journey in early 2022, which has allowed me to work my way up to the most memorable projects below:</span>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">May 2025 – Present</div>
+                        <h3 class="timeline-title">CAO</h3>
+                        <div class="timeline-company">Fuzz Labs</div>
+                        <p class="timeline-desc">Lead overall operations and project direction, manage freelancers and internal teams, oversee growth, planning, and execution</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">November 2025 – Present</div>
+                        <h3 class="timeline-title">Moderator</h3>
+                        <div class="timeline-company">Feather Client</div>
+                        <p class="timeline-desc">Handle ticket support and community moderation</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">May 2025 – February 2026</div>
+                        <h3 class="timeline-title">Management</h3>
+                        <div class="timeline-company">Owners United</div>
+                        <p class="timeline-desc">Handled reports management and basic moderation</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">January 2026 – Present</div>
+                        <h3 class="timeline-title">Management</h3>
+                        <div class="timeline-company">Owners Alliance</div>
+                        <p class="timeline-desc">Mentor and manage the staff team</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">January 2026 – Present</div>
+                        <h3 class="timeline-title">Management</h3>
+                        <div class="timeline-company">BoxPvP</div>
+                        <p class="timeline-desc">Managed staff and moderation, led Human Resources, handled user support</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio -->
+            <section id="portfolio" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Portfolio</h2>
+                </div>
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('Management Dashboard', 'Systems Architecture', 'Designed and architected a robust backend structure for team task delegation and time tracking.', 'https://picsum.photos/400/250?random=1')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=1" alt="Project 1" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Management Dashboard</h3>
+                            <div class="portfolio-tag">Systems Architecture</div>
+                            <p class="portfolio-desc">Designed a robust backend structure for team management.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('Corporate Landing Page', 'Web Development', 'Developed a fast, modern landing page for a B2B service using clean, maintainable frontend code.', 'https://picsum.photos/400/250?random=2')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=2" alt="Project 2" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Corporate Landing Page</h3>
+                            <div class="portfolio-tag">Web Development</div>
+                            <p class="portfolio-desc">Fast, modern landing page for B2B services.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('HR Recruitment Portal', 'UI/UX & Development', 'Built an internal hiring portal to streamline the onboarding experience and catalog applicants.', 'https://picsum.photos/400/250?random=3')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=3" alt="Project 3" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">HR Portal</h3>
+                            <div class="portfolio-tag">UI/UX & Development</div>
+                            <p class="portfolio-desc">Internal hiring portal for streamlined onboarding.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('Operations Toolkit', 'Scripting / Tools', 'Automated repetitive structural tasks through custom scripts to save >20 man-hours weekly.', 'https://picsum.photos/400/250?random=4')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=4" alt="Project 4" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Operations Toolkit</h3>
+                            <div class="portfolio-tag">Scripting / Tools</div>
+                            <p class="portfolio-desc">Automated tasks saving >20 hours weekly.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('Community Platform', 'Community Management', 'Launched and scaled a user community platform featuring ticket tracking and resource hubs.', 'https://picsum.photos/400/250?random=5')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=5" alt="Project 5" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">Community Platform</h3>
+                            <div class="portfolio-tag">Management</div>
+                            <p class="portfolio-desc">Ticket tracking and user resource hub.</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio-card" onclick="openPortfolioModal('E-commerce Revamp', 'Web Development', 'Refactored frontend codebase for a boutique shop resulting in 40% faster load times.', 'https://picsum.photos/400/250?random=6')">
+                        <div class="portfolio-img-wrapper">
+                            <img src="https://picsum.photos/400/250?random=6" alt="Project 6" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-plus">+</span>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-title">E-commerce Revamp</h3>
+                            <div class="portfolio-tag">Web Development</div>
+                            <p class="portfolio-desc">40% faster load times via refactoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews -->
+            <section id="reviews" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Reviews</h2>
+                </div>
+                <div class="reviews-container">
+                    <div class="reviews-carousel" id="carousel-track">
+                        <!-- Filled by JS -->
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prev-btn">‹</button>
+                        <button class="carousel-btn" id="next-btn">›</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="reveal">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+                <div class="contact-section">
+                    <p class="contact-intro">Have a project in mind or want to work together? Reach out through any of the channels below.</p>
+                    <div class="contact-buttons">
+                        <a href="https://discord.com/users/760153843547242506" target="_blank" class="btn-outline">
+                            <img src="./icons8-discord-50.png" alt="Discord"> Message on Discord
+                        </a>
+                        <a href="mailto:contact@edadev.net" class="btn-outline">
+                            <img src="./icons8-email-50.png" alt="Email"> Send an Email
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        © 2026 Eda — Developer & Manager. All Rights Reserved.
+    </footer>
+
+    <!-- Service Modal -->
+    <div class="modal-overlay" id="service-modal" onclick="closeModal(event, 'service-modal')">
+        <div class="modal-card">
+            <button class="modal-close" onclick="forceCloseModal('service-modal')">&times;</button>
+            <h2 class="section-title" id="modal-title">Service Title</h2>
+            <div class="modal-label">What I offer:</div>
+            <div class="modal-box">
+                <ul id="modal-list">
+                    <!-- Populated by JS -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div class="modal-overlay" id="portfolio-modal" onclick="closeModal(event, 'portfolio-modal')">
+        <div class="modal-card" style="padding: 20px;">
+            <button class="modal-close" onclick="forceCloseModal('portfolio-modal')">&times;</button>
+            <img id="port-modal-img" src="" alt="Project Image" style="width:100%; border-radius:12px; height: 300px; object-fit: cover; margin-bottom: 20px;">
+            <div style="padding: 0 20px 20px 20px;">
+                <h2 class="section-title" id="port-modal-title" style="margin-bottom: 5px; font-size: 28px;">Title</h2>
+                <div class="modal-label" style="margin-top:0;">Role: <span id="port-modal-role" style="color:var(--text-muted); font-weight: 500;">Role</span></div>
+                <div class="modal-box">
+                    <p id="port-modal-desc" style="color:var(--text-muted); font-size: 15px; line-height: 1.6;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
